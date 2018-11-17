@@ -4,8 +4,6 @@ import javax.transaction.Transactional;
 
 public interface AsynchronicznaObslugaMeczy {
     @Transactional
-    void aktualizujWynikiMeczy();
+    void aktualizujWynikiMeczyIRozliczTypy();
 
-    @Transactional
-    void rozliczTypy();
 }

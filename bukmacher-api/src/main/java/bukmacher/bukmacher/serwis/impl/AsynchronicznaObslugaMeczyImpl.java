@@ -39,7 +39,7 @@ public class AsynchronicznaObslugaMeczyImpl implements AsynchronicznaObslugaMecz
 
 
     @Override
-    public void aktualizujWynikiMeczy() {
+    public void aktualizujWynikiMeczyIRozliczTypy() {
         LigaHelperImpl.ligi.forEach(liga -> {
                     AktualnaKolejka aktualnaKolejka = aktualnaKolejkaRepository.findFirstByIdLigi(liga.getIdLigi());
                     Kolejka definicjaKolejki = kolejkaRepository.findFirstByIdLigiAndNumerKolejki(liga.getIdLigi(), aktualnaKolejka.getNumerAktualnejKolejki());
@@ -66,22 +66,21 @@ public class AsynchronicznaObslugaMeczyImpl implements AsynchronicznaObslugaMecz
                     }
                 }
         );
+        rozliczTypy();
     }
 
-    @Override
-    public void rozliczTypy() {
+    private void rozliczTypy() {
         List<Typ> listaTypowDoRozliczenia = typRepository.findAllByStatusTypu(TypStatus.OTWARTY);
         List<Uzytkownik> uzytkownicyDoZaaktualiowania = new LinkedList<>();
         listaTypowDoRozliczenia.forEach(typ -> {
             Uzytkownik uzytkownik = typ.getUzytkownik();
             uzytkownik.rozliczTyp(typ);
-            if(!uzytkownicyDoZaaktualiowania.contains(uzytkownik)) uzytkownicyDoZaaktualiowania.add(uzytkownik);
+            if (!uzytkownicyDoZaaktualiowania.contains(uzytkownik)) uzytkownicyDoZaaktualiowania.add(uzytkownik);
             typ.setStatusTypu(TypStatus.ZAMKNIETY);
         });
         typRepository.saveAll(listaTypowDoRozliczenia);
         uzytkownikRepository.saveAll(uzytkownicyDoZaaktualiowania);
     }
-
 
 
 }

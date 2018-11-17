@@ -6,6 +6,8 @@ import bukmacher.bukmacher.model.dto.AktualnaKolejkaDto;
 import bukmacher.bukmacher.model.dto.TypDto;
 import bukmacher.bukmacher.model.dto.WydarzenieDto;
 import bukmacher.bukmacher.model.encja.Mecz;
+import bukmacher.bukmacher.model.encja.Typ;
+import bukmacher.bukmacher.model.encja.Uzytkownik;
 import bukmacher.bukmacher.repository.AktualnaKolejkaRepository;
 import bukmacher.bukmacher.repository.MeczRepository;
 import bukmacher.bukmacher.repository.TypRepository;
@@ -16,6 +18,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -75,7 +78,10 @@ public class BukmacherServiceImpl implements BukmacherService {
 
     @Override
     public void zapiszTyp(TypDto typDto) {
-        typRepository.save(typMapper.mapDoDbo(typDto));
+        Typ typ = typMapper.mapDoDbo(typDto);
+        typRepository.save(typ);
+        Uzytkownik uzytkownik = typ.getUzytkownik();
+        uzytkownik.setStanKonta(uzytkownik.getStanKonta().subtract(new BigDecimal(typ.getStawka())));
     }
 
 
