@@ -18,6 +18,7 @@ import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 
+//TODO: ustawić synchroniczne wywolanie uslug (cron)
 @Log
 @Service
 @AllArgsConstructor(onConstructor = @_(@Autowired))
