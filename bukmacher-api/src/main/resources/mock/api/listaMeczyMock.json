@@ -1,0 +1,82 @@
+[
+  {
+    "idWydarzenia": "27285",
+    "nazwaWydarzenia": "Leganes - Getafe",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27286",
+    "nazwaWydarzenia": "Real Sociedad - Valladolid",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27287",
+    "nazwaWydarzenia": "Valencia - Sevilla",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27288",
+    "nazwaWydarzenia": "Villarreal - Celta Vigo",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27284",
+    "nazwaWydarzenia": "Huesca - Real Madrid",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27283",
+    "nazwaWydarzenia": "Espanyol - Barcelona",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27282",
+    "nazwaWydarzenia": "Eibar - Levante",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27281",
+    "nazwaWydarzenia": "Real Betis - Rayo Vallecano",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27280",
+    "nazwaWydarzenia": "Atletico Madrid - Alaves",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  },
+  {
+    "idWydarzenia": "27279",
+    "nazwaWydarzenia": "Athletic Club - Girona",
+    "dataWydarzenia": "2018-12-09 16:00",
+    "kursGospodarze": 0.0,
+    "kursRemis": 3.24,
+    "kursGoscie": 5.0
+  }
+]

@@ -1,0 +1,1 @@
+INSERT INTO bukmacher.hibernate_sequence (next_val) VALUES (153);
